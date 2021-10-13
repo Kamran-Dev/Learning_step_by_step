@@ -72,8 +72,8 @@ print("String Slicing");
 
 # if/else if statements
 
-age = input("How old are you?: ");
-aga = int(age);
+#age = input("How old are you?: ");
+#aga = int(age);
 
 if(int(age) > 18):
     print("You are adult")
@@ -84,3 +84,4 @@ else:
 
 
 # Logical operators
+print("Logical Operators");
