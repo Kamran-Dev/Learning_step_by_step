@@ -279,3 +279,16 @@ print(ls)
 ls.reverse() # reverse permanently, NOT alphabetically
 print(ls)
 print(len(ls))
+
+### Working with Lists ###
+
+Color = ["red", "blue", "orange", "gray", "black"]
+for colors in Color:
+    print("Here is: {}.".format(colors.title()))
+    print("Did you chose {} ? \n".format(colors.upper()))
+
+print("Good bye")
+
+
+
+### IF statements ###
