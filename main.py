@@ -209,4 +209,73 @@ print("\n * * * * * * * * BOOLEANS * * * * * * * * \n")
 print(9 > 4) #True
 print(1 > 4)  #False
 b = None # no any assignment. just use as a placeholder
-print(type(b)) # Class NoneType
+print(type(b)) #Class NoneType
+
+
+
+
+
+#################################  BOOK  ##############
+## STRING ##
+name = "ada loveLANCE"
+print(name.title())
+print(name.upper())
+print(name.lower())
+
+# using variables in String
+first_name = "ada"
+second_name = "lovelance"
+full_name = f"{first_name} {second_name}" #these srings are called f-strings
+print(full_name)
+print(f"Hello, {full_name.title()}!")
+mmm = f"{first_name.title()}!"
+print(mmm)
+full_name2 = "{} and {}".format(first_name.title(), second_name) #format type
+print(full_name2.title())
+print("\tAdding tab")
+print("\nAdding new line")
+print("\n\tAdding new line and tab")
+newVar = "   HEllo   "
+print(newVar)
+print(newVar.rstrip()) #removing whitespaces right side
+print(newVar.lstrip()) #left side
+print(newVar.strip()) #both sides
+
+
+tuio = 'Alber: "Hello!"'
+print(tuio)
+print(' Albert, " A Person !" ');
+
+a, b, c = 10, 21 ,23
+print(a,b,c)
+
+### BOOK ### LIST ###
+
+kiloList = [123, 32, "blue", 940,  34.5, "cinnamon"]
+print(kiloList[-1].upper())
+newMessage = "This is {}".format(kiloList[-1].upper())
+print(newMessage)
+kiloList[0] = 4334
+kiloList.append(4214)
+kiloList.remove(32)  #remove with value
+kiloList.insert(0, 155) # insert with index
+del kiloList[0] # delete with index
+del kiloList[1]
+del kiloList[2]
+popped = kiloList.pop(-1)
+print(kiloList)
+print([popped])
+cars = ["subaru", "toyota", "jeep", "mercedes", "bmw", "volkswagen", "audi", "ferrari", "porsche"]
+last_owned = cars.pop() #by default it will pop the last
+print("My last owned car was {}.".format(last_owned.upper()))
+print(cars)
+print(sorted(cars,reverse=True)) #temporary sorted
+print(cars)
+cars.sort(reverse=True) #reversed sorting #permanent!
+print(cars)
+
+ls = ["b", "o", "d", "w", "a", "c", "f"]
+print(ls)
+ls.reverse() # reverse permanently, NOT alphabetically
+print(ls)
+print(len(ls))
