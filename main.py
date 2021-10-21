@@ -2,6 +2,8 @@
 # 2021 Complete Python Bootcamp From Zero to Hero in Python
 # Number
 
+
+
 print(3 + 3);
 print(3 - 4);
 print(3 * 5);
@@ -215,8 +217,15 @@ print(type(b)) #Class NoneType
 
 
 
-#################################  BOOK  ##############
-## STRING ##
+
+
+
+
+
+########### BOOK ###################
+##  BOOK  Chapter 2: STRING ##
+
+print("\n *** !!! BOOK !!! *** \n")
 name = "ada loveLANCE"
 print(name.title())
 print(name.upper())
@@ -249,7 +258,7 @@ print(' Albert, " A Person !" ');
 a, b, c = 10, 21 ,23
 print(a,b,c)
 
-### BOOK ### LIST ###
+### BOOK Cahpter 3: LIST ###
 
 kiloList = [123, 32, "blue", 940,  34.5, "cinnamon"]
 print(kiloList[-1].upper())
@@ -280,7 +289,7 @@ ls.reverse() # reverse permanently, NOT alphabetically
 print(ls)
 print(len(ls))
 
-### Working with Lists ###
+### Chapter 4: Working with Lists ###
 
 Color = ["red", "blue", "orange", "gray", "black"]
 for colors in Color:
@@ -290,5 +299,135 @@ for colors in Color:
 print("Good bye")
 
 
+for value in range(1, 5):
+    print(value)
 
-### IF statements ###
+print("********************")
+rangeNumbers = list(range(0, 15, 2)) #range of 0 - 15 only even numbers. it adds 2 to the 0 untill
+# it reaches to 15
+print(rangeNumbers)
+
+# making list of square numbers
+squareList = [] #empty list
+for value in range(0, 11): # range from 0 to 11
+    sqr = value ** 2 #square of numbers in a range
+    squareList.append(sqr) #add square to the empty list
+print(squareList)
+#list comprehension
+squares = [value ** 2 for value in range(1, 20)]
+print(squares)
+
+
+listForTest = [23, 54, 60, 1, 9, -1, 31]
+#find minimum
+print(min(listForTest))
+print(max(listForTest))
+print(sum(listForTest))
+
+
+#Slicing the lists
+
+daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+print(daysOfTheWeek[0:2])
+print(daysOfTheWeek[1:2])
+print(daysOfTheWeek[:3])
+print(daysOfTheWeek[1:])
+print(daysOfTheWeek[-3:]) #last 3
+
+# loop through a slice
+print("Here is:")
+for g in daysOfTheWeek[0:]:
+    print(g)
+print("End of the loop!!!")
+
+
+#copying lists with slicing
+days = daysOfTheWeek[:]
+print(days)
+print(daysOfTheWeek)
+days.append("Holiday")
+daysOfTheWeek.append("Work-Day")
+print(days)
+print(daysOfTheWeek) # we can see that there are 2 different lists at the end
+
+#copying lists without slicing
+fruits = ["apple", "avocado", "watermelon", "mango", "peach"]
+fruits2 = fruits
+print(fruits)
+print(fruits2)
+fruits.append("pineapple")
+fruits2.append("pear")
+print(fruits)
+print(fruits2) #at the end totally the same lists
+
+
+### Tuples ###
+# Tuples are immutbale lists. which you cannot change
+
+planets = ("World", "Saturn", "Moon")
+print(planets[0])
+print(planets[1])
+print(planets[2])
+
+#looping though in a tuple
+
+for dd in fruits:
+    print(dd)
+
+# writing over the tuple
+# we cannot change/modify a tuple but we can assign new values to the tuple
+
+fruits = ("banana", "orange")
+for ll in fruits:
+    print(ll)
+### Chapter 5: IF statements ###
+
+
+
+### UDEMY ###
+
+print("**** UDEMY ****")
+myfile = open('myFile.txt')
+with open ("myFile.txt") as file:
+    contentOfFile = file.read()
+
+print(contentOfFile)
+print(myfile.read())
+
+print(myfile.seek(0))
+print(myfile.readlines())
+
+print(myfile.seek(0))
+print(myfile.readline())
+
+print(myfile.name) #name of the file
+
+# open file in another location
+
+myfile01 = open("C:\\Users\\kamra\\Desktop\\tst2.txt") #give full directory location
+
+
+print(myfile01.read())
+
+# after opening the files we have to close them
+myfile.close()
+myfile01.close()
+
+# mode = "r" - read only
+# mode = "w" - write only (overwrite or create new one)
+# mode = "a" - append only, add
+# mode = "r+" - reading and writing
+# mode = "w+" - writing and reading
+
+
+
+with open("xxx.txt", "r+") as file1:
+    content23 = file1.read()
+    print(file1.name)
+    print(content23)
+    file1.write("\n appended line \n") # mode should be mode = w, in order to add
+
+    # w - overwrite or create a new file
+    with open ("newCreatedFile.txt", "w") as opl:
+        opl.write("I have created this file though python")
+        print(opl.readable())
