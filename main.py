@@ -404,14 +404,14 @@ print(myfile.name) #name of the file
 
 # open file in another location
 
-myfile01 = open("C:\\Users\\kamra\\Desktop\\tst2.txt") #give full directory location
+#myfile01 = open("C:\\Users\\kamra\\Desktop\\tst2.txt") #give full directory location
 
 
-print(myfile01.read())
+
 
 # after opening the files we have to close them
 myfile.close()
-myfile01.close()
+
 
 # mode = "r" - read only
 # mode = "w" - write only (overwrite or create new one)
@@ -421,13 +421,18 @@ myfile01.close()
 
 
 
-with open("xxx.txt", "r+") as file1:
+with open("myFile.txt", "r+") as file1:
     content23 = file1.read()
     print(file1.name)
     print(content23)
     file1.write("\n appended line \n") # mode should be mode = w, in order to add
 
-    # w - overwrite or create a new file
-    with open ("newCreatedFile.txt", "w") as opl:
-        opl.write("I have created this file though python")
-        print(opl.readable())
+# w - overwrite or create a new file
+with open ("newCreatedFile.txt", "w") as opl:
+    opl.write("I have created this file though python")
+    print(opl.readable())
+
+
+#
+
+
